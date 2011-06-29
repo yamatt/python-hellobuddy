@@ -1,0 +1,107 @@
+0.2.2
+check for ssl and authenticate 
+@ and ! are not part of user or group (I may change this back if I find it annoying)
+CTRL+c on the command line kills the bastard!
+hideable user info - @psquid
+close button on tabs - @psquid
+don't drink and dent? 
+
+0.2.1
+switched from since to since_id in the communicator
+did some shit to *hopefully* trim heybuddy's resource usage
+Work with status.net and not just identi.ca ( I think there will be
+problems with the horseshit date handling) - @psquid instigator ;)
+avatars in notifications - @x1101
+dent fetch rate preference - @samsnotunix
+toggle app hidden/shown when running in tray app mode and clicking on the tray icon - @corenominal
+
+
+0.2.0
+unified filtering on the settings tab (still looks like poo)
+favorite button
+block finally fucking works
+some stuff and bug fixes
+
+0.1.9
+link to user's url on User tab
+notification stuff (thanks x1101!)
+ctrl+u sets focus in the Update Status text view
+ctrl+page_up and ctrl+page_down will give focus to the notebook(tabs)
+ctrl+w closes the window when in run_as_tray_app mode
+stripped the crappy html formatting that gets added to a status' "source"
+added blocking that doesn't work because API doesn't work
+
+0.1.8
+direct messages? 
+pruning: dents and mentions will display "dents at startup"x3 dents
+
+0.1.7
+use https for requests that require authentication
+link color selection
+
+0.1.6
+more resource friendly (apparently)
+clicking on tray icon will bring heybuddy to the front
+display dent source
+quit from status icon
+copy user selected text from dents
+redent
+
+0.1.5
+quoted urls that are to be opened
+added About.py for about tab
+added Settings.py for Settings tab
+added "run as tray application" option
+added "do not download avatars" option
+added "weird context crap" option
+refactored some shit
+
+0.1.4
+case insensitive filters
+throbber thingy
+tray icon
+minimize to tray
+use "xdg-open" to open urls
+
+0.1.2
+bug fixes
+
+0.1.1 
+not much
+
+0.1.0 
+filtering tags
+filtering groups
+filtering users
+remember positioning
+group avatars
+get 50 dents
+
+0.0.7
+adjusted gtk.Label when window expands
+added ImageCache class to handle getting images into dents
+bug fixes
+spell check if gtkspell is installed
+
+0.0.6
+user tab shows user's recent dents
+groups
+clickable urls
+
+0.0.5
+added changy color icon
+added dates to dents
+switch to gobject mainloop
+added assets/icon.png
+Sloppy direct message checking
+
+0.0.4
+Some UI changes
+Offset the times that statuses and mentions are checked
+Increased time between server checks
+Added UserPage.py
+Added XMLprocessor.py
+Added a ChangeLog
+
+0.0.3
+A bunch of stuff I didn't put in the change log
