@@ -192,8 +192,8 @@ class Communicator(gobject.GObject,Thread):
 		print url
 		self.process_httprequest(url,'mentionsXML') 
 
-	def get_favourites(self):
-		url = "%s/statuses/mentions/favorites.xml" % (self.apiroot)
+	def get_favorites(self):
+		url = "%s/favorites.xml" % (self.apiroot)
 		print url
 		request = urllib2.Request(url)
 		request.add_header("Authorization", self.authheader)

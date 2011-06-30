@@ -68,7 +68,7 @@ version = '0.2.3'
 branch="testing: 295"
 
 #make a fake enumeration
-DENT,MENTION,FAVORITE,DIRECT,CONTEXT,USER,GROUP,ACCOUNT,ABOUT = range(9)
+DENT,MENTION,,DIRECT,CONTEXT,USER,GROUP,ACCOUNT,ABOUT = range(8)
 #keep track of high ids
 highest_id={ "dent":0,
 	"dent_previous":0,
@@ -471,7 +471,6 @@ class application :
 		''' why the fuck do I need to do this? '''
 		self.mainwindow.set_notebook_page(DIRECT)
 		self.mainwindow.set_notebook_page(MENTION)
-		self.mainwindow.set_notebook_page(FAVORITE)
 		self.mainwindow.set_notebook_page(DENT)
 		#send the service to the settings page
 		self.settingspage.set_service(self.conf.service() )
@@ -612,8 +611,6 @@ class application :
 	def page_change(self,widget,old_id,new_id):
 		if new_id==MainWindow.DIRECT:
 			self.get_direct_messages()
-		elif new_id==MainWindow.FAVORITE:
-		    self.get_favorites()
 		else:
 			if self.is_direct_message_mode:
 				self.set_is_direct_message_mode(False)

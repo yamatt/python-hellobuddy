@@ -14,7 +14,7 @@ except:
 
 from PlatformSpecific import has_hildon
 #make a fake enumeration
-DENT,MENTION,DIRECT,CONVERSATION,USER,GROUP,ACCOUNT,ABOUT = range(8)
+DENT,MENTION,FAVORITE,DIRECT,CONVERSATION,USER,GROUP,ACCOUNT,ABOUT = range(9)
 STATUS_MESSAGE,ERROR_MESSAGE = range(2)
 class MainWindow(gtk.Window,gobject.GObject):
 	__gsignals__ = {
