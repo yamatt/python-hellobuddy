@@ -150,6 +150,7 @@ class application :
 		self.comm = Communicator(app_name, cert_file)
 		self.comm.connect('statusesXML',self.process_statusesXML,self.dentspage)
 		self.comm.connect('mentionsXML',self.process_statusesXML,self.mentionspage)
+		self.comm.connect('favoritesXML', self.process_statusesXML,self.favoritespage)
 		self.comm.connect('group-statusesXML',self.process_statusesXML,self.grouppage)
 		self.comm.connect('user-statusesXML',self.process_statusesXML,self.userpage)
 		self.comm.connect('direct_messagesXML',self.process_statusesXML,self.directspage,True)
