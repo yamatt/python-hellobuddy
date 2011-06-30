@@ -25,6 +25,10 @@ class Communicator(gobject.GObject,Thread):
 			gobject.SIGNAL_RUN_FIRST, gobject.TYPE_NONE,
 							 (gobject.TYPE_STRING,)
 			),
+                'favoritesXML': (
+                        gobject.SIGNAL_RUN_FIRST, gobject.TYPE_NONE,
+                                                         (gobject.TYPE_STRING,)
+                        ),
 		'group-statusesXML': (
 			gobject.SIGNAL_RUN_FIRST, gobject.TYPE_NONE,
 							 (gobject.TYPE_STRING,)
@@ -187,8 +191,15 @@ class Communicator(gobject.GObject,Thread):
 		url = "%s/statuses/mentions/%s.xml?count=%s&since_id=%s" % (self.apiroot,self.name,count,since)
 		print url
 		self.process_httprequest(url,'mentionsXML') 
+
+	def get_favourites(self):
+		url = "%s/statuses/mentions/favorites.xml" % (self.apiroot)
+		print url
+		request = urllib2.Request(url)
+		request.add_header("Authorization", self.authheader)
+		self.process_httprequest(request,'favoritesXML')
 	
-	def	get_user_info(self,name):
+	def get_user_info(self,name):
 		url="%s/users/show.xml?screen_name=%s" % (self.sapiroot,name)
 		print url
 		request = urllib2.Request(url)

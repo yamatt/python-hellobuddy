@@ -251,6 +251,9 @@ class application :
 		
 		self.mentionspage = ScrollPage()
 		self.mainwindow.notebook.append_page(self.mentionspage,uncloseable_tab_label(_("Mentions")) )
+
+		self.favoritespage = ScrollPage()
+		self.mainwindow.notebook.append_page(self.favoritespage,uncloseable_tab_label(_("Favorites")) )
 		
 		self.directspage = ScrollPage()
 		self.mainwindow.notebook.append_page(self.directspage,uncloseable_tab_label(_("Directs")) )
@@ -439,7 +442,12 @@ class application :
 	def get_mentions(self,count="20"):
 		if self.credentials_verified:
 			self.increment_requests()
-			self.comm.get_mentions(count=count,since=highest_id['mention_previous'])	
+			self.comm.get_mentions(count=count,since=highest_id['mention_previous'])
+
+	def get_favorites(self):
+		if self.credentials_verified:
+			self.increment_requests()
+			self.comm.get_favorites()
 	
 	def get_direct_messages(self):
 		if self.credentials_verified:
